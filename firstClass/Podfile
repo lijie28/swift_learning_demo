@@ -1,0 +1,11 @@
+platform :ios, ‘8.0’
+ 
+target 'firstClass' do
+    use_frameworks!
+    pod 'Alamofire'
+    pod 'Realm'
+    pod 'RealmSwift'
+
+#简单粗暴的方法：直接让第三方库的警告不显示
+inhibit_all_warnings!
+end

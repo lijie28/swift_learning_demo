@@ -1,0 +1,12 @@
+platform :ios, '9.0'
+
+def pods
+    pod 'SnapKit'
+end
+
+target 'swift_demo' do
+
+  use_frameworks!
+  pods
+
+end
