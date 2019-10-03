@@ -18,8 +18,11 @@ class Test3ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("test3 load")
 
         btnTest.titleLabel?.text = "change"
+//        btnTest.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
         // Do any additional setup after loading the view.
     }
     

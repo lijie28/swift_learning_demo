@@ -58,21 +58,13 @@ class ViewController: UIViewController {
         
         scrollView.isPagingEnabled = true
     }
+    
+    
 
 
 }
 
 extension ViewController : UIScrollViewDelegate{
-    
-//    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-//        print("scrollViewDidEndScrollingAnimation")
-//        print(scrollView.contentOffset)
-//    }
-//
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        print("scrollViewDidEndDragging")
-//        print(scrollView.contentOffset)
-//    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         print("scrollViewDidEndDecelerating")
@@ -80,6 +72,9 @@ extension ViewController : UIScrollViewDelegate{
         
         selectedIndex = Int(scrollView.contentOffset.x / screen_width)
         self.collection.reloadData()
+        
+        
+        self.collection.scrollToItem(at: IndexPath(row: selectedIndex, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
     }
 }
 
@@ -110,6 +105,9 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource{
         self.collection.reloadData()
         
         self.scrollView.setContentOffset(CGPoint(x: screen_width * CGFloat(selectedIndex), y: 0), animated: true)
+        
+        self.collection.scrollToItem(at: IndexPath(row: selectedIndex, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        
     }
 
 }

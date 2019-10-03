@@ -14,6 +14,7 @@ class Test2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("test2 load")
         let tf = UILabel()
         tf.frame = CGRect(x: 0, y: 0, width: 100, height: 50 )
         tf.text = "test"
