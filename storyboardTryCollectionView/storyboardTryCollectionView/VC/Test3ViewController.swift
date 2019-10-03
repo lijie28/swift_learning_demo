@@ -9,10 +9,17 @@
 import UIKit
 
 class Test3ViewController: UIViewController {
-
+    @IBOutlet weak var btnTest: UIButton!
+    
+    @IBAction func testBtn(_ sender: UIButton) {
+    
+        print("do sth hehe")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        btnTest.titleLabel?.text = "change"
         // Do any additional setup after loading the view.
     }
     

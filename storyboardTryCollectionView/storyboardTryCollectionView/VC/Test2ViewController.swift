@@ -10,13 +10,24 @@ import UIKit
 
 class Test2ViewController: UIViewController {
 
+    @IBOutlet weak var btn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tf = UILabel()
+        tf.frame = CGRect(x: 0, y: 0, width: 100, height: 50 )
+        tf.text = "test"
+        self.view.addSubview(tf)
+        
+        btn.addTarget(self, action: #selector(doSth), for: UIControl.Event.touchUpInside)
         // Do any additional setup after loading the view.
     }
     
 
+    @objc func doSth()  {
+        print("hehe")
+    }
+    
     /*
     // MARK: - Navigation
 
