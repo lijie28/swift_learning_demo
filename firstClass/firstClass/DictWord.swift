@@ -17,13 +17,13 @@ class DictWord: Object {
     @objc dynamic var name = ""
     @objc dynamic var pronounce = ""
     @objc dynamic var url = ""
-//    @objc dynamic var id = 123
+    @objc dynamic var id = NSUUID().uuidString
     
     
     
-//    override static func primaryKey() -> String? {
-//        return "id"
-//    }
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
     /**
     //重写 Object.primaryKey() 可以设置模型的主键。

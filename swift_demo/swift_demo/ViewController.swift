@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             make.height.equalTo(100)
             make.center.equalToSuperview()
         }
-        button.addTarget(self, action: , for: UIControl.Event.touchUpInside)
+        button.addTarget(self, action: <#Selector#> , for: UIControl.Event.touchUpInside)
     }
 
 

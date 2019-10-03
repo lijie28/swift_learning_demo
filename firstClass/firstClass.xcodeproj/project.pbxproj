@@ -21,6 +21,7 @@
 		049FCD3C2216A15C003F5FF2 /* DicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FCD3B2216A15B003F5FF2 /* DicViewController.swift */; };
 		049FCD3E2218033C003F5FF2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FCD3D2218033C003F5FF2 /* ResultViewController.swift */; };
 		04BB92AC225383DE00C5A1BF /* DictWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB92AB225383DE00C5A1BF /* DictWord.swift */; };
+		04C8BE4B226218C6002987FD /* XWWordRealmTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8BE4A226218C6002987FD /* XWWordRealmTool.swift */; };
 		04F4AF5B221826E200010A27 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4AF5A221826E200010A27 /* Config.swift */; };
 		251B2A2811D8FE9A0567FDE1 /* Pods_firstClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE1165ADBC8BE8644F64F02 /* Pods_firstClass.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		049FCD3B2216A15B003F5FF2 /* DicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicViewController.swift; sourceTree = "<group>"; };
 		049FCD3D2218033C003F5FF2 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		04BB92AB225383DE00C5A1BF /* DictWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictWord.swift; sourceTree = "<group>"; };
+		04C8BE4A226218C6002987FD /* XWWordRealmTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWordRealmTool.swift; sourceTree = "<group>"; };
 		04F4AF5A221826E200010A27 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		7EE1165ADBC8BE8644F64F02 /* Pods_firstClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firstClass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA954074E77A6F8CB76DD469 /* Pods-firstClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstClass.release.xcconfig"; path = "Pods/Target Support Files/Pods-firstClass/Pods-firstClass.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				049FCD3B2216A15B003F5FF2 /* DicViewController.swift */,
 				049FCD3D2218033C003F5FF2 /* ResultViewController.swift */,
 				04BB92AB225383DE00C5A1BF /* DictWord.swift */,
+				04C8BE4A226218C6002987FD /* XWWordRealmTool.swift */,
 			);
 			path = firstClass;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				0496A88B2233BB5A006F3B6B /* TFHppleElement.m in Sources */,
 				04BB92AC225383DE00C5A1BF /* DictWord.swift in Sources */,
 				0496A88C2233BB5A006F3B6B /* XPathQuery.m in Sources */,
+				04C8BE4B226218C6002987FD /* XWWordRealmTool.swift in Sources */,
 				0496A88A2233BB5A006F3B6B /* TFHpple.m in Sources */,
 				049FCD3C2216A15C003F5FF2 /* DicViewController.swift in Sources */,
 				04F4AF5B221826E200010A27 /* Config.swift in Sources */,
@@ -562,6 +566,7 @@
 				DEVELOPMENT_TEAM = T9LUTVZ3X2;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = firstClass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +588,7 @@
 				DEVELOPMENT_TEAM = T9LUTVZ3X2;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = firstClass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

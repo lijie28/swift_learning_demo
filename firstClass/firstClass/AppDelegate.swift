@@ -30,9 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(realm?.configuration.fileURL ?? "")
             print("1")
             if let _ = realm {
-                print("Realm 服务器配置成功!")
+                print("Realm 服务器配置成功!",dbPath)
             }else if let error = error {
-                print("Realm 数据库配置失败：\(error.localizedDescription)")
+                print("Realm 数据库配置失败：\(error.localizedDescription)",dbPath)
             }
             
             

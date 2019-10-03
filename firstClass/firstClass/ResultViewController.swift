@@ -10,31 +10,11 @@
 import UIKit
 import Alamofire
 //import libxml2
+//import insertWord
 
-import RealmSwift
 
 
-class XWWordRealmTool: Object {
-    private class func getDB() -> Realm {
-        let docPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] as String
-        let dbPath = docPath.appending("/defaultDB.realm")
-        /// 传入路径会自动创建数据库
-        let defaultRealm = try! Realm(fileURL: URL.init(string: dbPath)!)
-        return defaultRealm
-    }
-}
 
-/// 增
-extension XWWordRealmTool {
-    
-    public class func insertWord(by word : DictWord) -> Void {
-        let defaultRealm = self.getDB()
-        try! defaultRealm.write {
-            defaultRealm.add(word)
-        }
-//        print(defaultRealm.configuration.fileURL ?? "")
-    }
-}
 
 
 class ResultViewController: UIViewController {
@@ -80,19 +60,8 @@ class ResultViewController: UIViewController {
                 print("result:",result["datas"] ?? "no result")
                 
                 let datas = result["datas"] as! NSArray
-                let dicWord = datas[0] as! NSDictionary
-                
-                let word = DictWord()
-                word.key = dicWord["key"] as! String
-                word.describe = dicWord["describe"] as! String
-                word.explain = dicWord["explain"] as! String
-                word.pronounce = dicWord["pronounce"] as! String
-                word.name = dicWord["name"] as! String
-                word.url = dicWord["url"] as! String
-                
-                XWWordRealmTool.insertWord(by: word)
-                
-//                print(Realm.Configuration.fileURL ?? "")
+                XWWordRealmTool.addDatas(by: datas)
+
             }
             else{
                 print("出错",DataResponse.error as Any)
@@ -104,7 +73,7 @@ class ResultViewController: UIViewController {
 
     
     
-    func matchKeyword(data:Data, keyword:String) -> Dictionary<String, Any> {
+func matchKeyword(data:Data, keyword:String) -> Dictionary<String, Any> {
         var mudic = Dictionary<String,Any>()
         var muarr = Array<Any>()
       

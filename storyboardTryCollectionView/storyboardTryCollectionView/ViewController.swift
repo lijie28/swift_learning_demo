@@ -73,7 +73,6 @@ extension ViewController : UIScrollViewDelegate{
         selectedIndex = Int(scrollView.contentOffset.x / screen_width)
         self.collection.reloadData()
         
-        
         self.collection.scrollToItem(at: IndexPath(row: selectedIndex, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
     }
 }

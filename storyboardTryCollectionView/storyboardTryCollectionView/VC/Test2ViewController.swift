@@ -8,9 +8,22 @@
 
 import UIKit
 
+
+protocol Test2ViewControllerInput {
+    func doSth()
+}
+
+protocol Test2ViewControllerOutput {
+    func saySth(word:String)
+}
+
+
 class Test2ViewController: UIViewController {
 
     @IBOutlet weak var btn: UIButton!
+    
+//    var output : Test2ViewControllerOutput
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,25 +31,38 @@ class Test2ViewController: UIViewController {
         let tf = UILabel()
         tf.frame = CGRect(x: 0, y: 0, width: 100, height: 50 )
         tf.text = "test"
-        self.view.addSubview(tf)
         
-        btn.addTarget(self, action: #selector(doSth), for: UIControl.Event.touchUpInside)
+        let tbtn = UIButton()
+        tbtn.frame = CGRect(x: 100, y: 50, width: 100, height: 50 )
+        tbtn.backgroundColor = UIColor.yellow
+//        tbtn.text = "test"
+        self.view.addSubview(tbtn)
+        tbtn.addTarget(self, action: #selector(btnClick), for: UIControl.Event.touchUpInside)
+//        tbtn.addSubview(tf)
+        
+        
+        
+        btn.addTarget(self, action: #selector(btnClick), for: UIControl.Event.touchUpInside)
         // Do any additional setup after loading the view.
     }
     
 
-    @objc func doSth()  {
-        print("hehe")
+    
+    @objc func btnClick(sender: UIButton) {
+        
+    }
+//    @objc func doSth()  {
+//        print("hehe")
+//    }
+    
+}
+
+extension Test2ViewController : Test2ViewControllerInput{
+    
+    
+    func doSth() {
+        print("123456")
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

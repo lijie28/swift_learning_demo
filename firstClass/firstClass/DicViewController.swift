@@ -10,7 +10,8 @@ import UIKit
 
 class DicViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate{
     
-    
+//    var datasoure = [nil] as [Any?]
+    var datasoure:Array<Any> = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3;
@@ -48,7 +49,15 @@ class DicViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let words = XWWordRealmTool.getDictWords()
+//        datasoure = [words.copy()]
+        for w in words{
+            print(w.key)
+        }
+        
+//        print(datasoure)
+        
+        
     }
     
     
