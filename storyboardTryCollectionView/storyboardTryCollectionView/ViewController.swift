@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         scrollView.frame = CGRect(x: 0, y: 0, width: screen_width, height: screen_height)
         scrollView.contentSize = CGSize(width: screen_width * CGFloat(titles.count), height: 0)
         
-        let test1 = Test1ViewController()
+        let test1 = Test3ViewController()
         test1.view.frame = CGRect(x: 0, y: 0, width: screen_width , height: screen_height)
         
         

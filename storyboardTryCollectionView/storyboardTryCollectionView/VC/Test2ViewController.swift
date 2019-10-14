@@ -39,9 +39,6 @@ class Test2ViewController: UIViewController {
         self.view.addSubview(tbtn)
         tbtn.addTarget(self, action: #selector(btnClick), for: UIControl.Event.touchUpInside)
 //        tbtn.addSubview(tf)
-        
-        
-        
         btn.addTarget(self, action: #selector(btnClick), for: UIControl.Event.touchUpInside)
         // Do any additional setup after loading the view.
     }
