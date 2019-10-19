@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 enum Sex: Int{
     case man
     case woman
@@ -51,7 +49,22 @@ struct People {
     }
 }
 
-struct Traffic {
+
+protocol BaseEntity {
+    var count: Int? {set get}
+    init(fromData data: Data)
+    func toData() -> Data
+}
+
+struct Traffic :BaseEntity{
+    var count: Int?
+    
+    func toData() -> Data {
+//        self.speed
+        return Data()
+    }
+    
+    
     // 1 byte
     var type: TrafficType!
 
@@ -106,10 +119,16 @@ class ViewController: UIViewController {
         testTraffic()
     }
 
-    func change<T>(){
-        let a = T()
-        print("\(T)")
-    }
+//    func toUInt8<T>(byte:T) -> [UInt8]{
+//
+//        if byte is UInt8{
+//            print("is UInt8" )
+//        }else if byte is UInt16{
+//            print("is UInt16" )
+//        }
+//        let a = byte
+//        print("\(a)")
+//    }
     
     func testTraffic() {
         //        var data = Data()
@@ -133,6 +152,8 @@ class ViewController: UIViewController {
 
         let traffic2 = Traffic(fromBusWithSpeed: 100)
 
+//        toUInt8(byte: UInt16(300))
+        
         print("traffic2:\(String(describing: traffic2.type)),\(String(describing: traffic2.speed)),\(String(describing: traffic2.speedUnit))")
     }
 

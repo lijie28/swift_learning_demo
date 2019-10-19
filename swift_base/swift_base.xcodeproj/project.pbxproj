@@ -104,6 +104,9 @@
 		041C15DD2351AA0200911914 /* swift_base */ = {
 			isa = PBXGroup;
 			children = (
+				048E150F235AA74700BD8E02 /* Presenter */,
+				048E150E235AA72E00BD8E02 /* Model */,
+				048E150D235AA71A00BD8E02 /* Base */,
 				041C15DE2351AA0200911914 /* AppDelegate.swift */,
 				041C15E02351AA0200911914 /* ViewController.swift */,
 				041C15E22351AA0200911914 /* Main.storyboard */,
@@ -130,6 +133,27 @@
 				041C16002351AA0600911914 /* Info.plist */,
 			);
 			path = swift_baseUITests;
+			sourceTree = "<group>";
+		};
+		048E150D235AA71A00BD8E02 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		048E150E235AA72E00BD8E02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		048E150F235AA74700BD8E02 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		223ABCCE843340505A9C30F8 /* Pods */ = {
@@ -293,7 +317,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n";
 		};
 		2A54FED5CF4A36F63304F66F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
