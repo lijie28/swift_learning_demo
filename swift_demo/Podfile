@@ -2,6 +2,7 @@ platform :ios, '9.0'
 
 def pods
     pod 'SnapKit'
+#    pod 'FileBrowser', '~> 1.0'
 end
 
 target 'swift_demo' do
