@@ -2,6 +2,7 @@ platform :ios, '9.0'
 
 def pods
     pod 'SnapKit'
+    pod 'R.swift'
 #    pod 'FileBrowser', '~> 1.0'
 end
 

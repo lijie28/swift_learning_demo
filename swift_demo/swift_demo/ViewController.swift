@@ -16,8 +16,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
-        
+    }
+    
+    func testSandBox() {
         //https://www.hangge.com/blog/cache/detail_527.html
         
         //step6. 获取沙盒里所有文件
@@ -32,7 +35,7 @@ class ViewController: UIViewController {
         }
         
         //fileList便是包含有该文件夹下所有文件的文件名及文件夹名的数组
-//        let fileList = fileManager.contents(atPath: documentDir)
+        //        let fileList = fileManager.contents(atPath: documentDir)
         
         
         do {
@@ -45,8 +48,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickOnSelectFile(_ sender: Any) {
-        
-
         
         let documentPaths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentDir = documentPaths.first
@@ -65,34 +66,4 @@ class ViewController: UIViewController {
 //        self.show(browser, sender: nil)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        //创建一个ContactAdd类型的按钮
-//        let button:UIButton = UIButton(type:.custom)
-//        button.backgroundColor = UIColor.yellow
-//        //设置按钮位置和大小
-////        button.frame = CGRect(x: 100, y: 100, width: 200, height: 50)
-//        //设置按钮文字
-//        button.setTitle("按钮", for: UIControl.State.normal)
-//        button.setTitleColor(UIColor.black, for: UIControl.State.normal)
-//        self.view.addSubview(button);
-//        button.snp.makeConstraints { (make) in
-//            make.width.equalTo(100)
-//            make.height.equalTo(100)
-//            make.center.equalToSuperview()
-//        }
-//        button.addTarget(self, action: <#Selector#> , for: UIControl.Event.touchUpInside)
-
-
 

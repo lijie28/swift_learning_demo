@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0460D87E2363DFE6005BF59C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460D87D2363DFE6005BF59C /* R.generated.swift */; };
 		04EFFDF421CA33DA008B976B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFDF321CA33DA008B976B /* AppDelegate.swift */; };
 		04EFFDF621CA33DA008B976B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFDF521CA33DA008B976B /* ViewController.swift */; };
 		04EFFDF921CA33DA008B976B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EFFDF721CA33DA008B976B /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0460D87D2363DFE6005BF59C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		04EFFDF021CA33DA008B976B /* swift_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EFFDF321CA33DA008B976B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EFFDF521CA33DA008B976B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		04EFFDF221CA33DA008B976B /* swift_demo */ = {
 			isa = PBXGroup;
 			children = (
+				0460D87D2363DFE6005BF59C /* R.generated.swift */,
 				04EFFDF321CA33DA008B976B /* AppDelegate.swift */,
 				04EFFDF521CA33DA008B976B /* ViewController.swift */,
 				04EFFDF721CA33DA008B976B /* Main.storyboard */,
@@ -157,6 +160,7 @@
 			buildConfigurationList = 04EFFE1821CA33DC008B976B /* Build configuration list for PBXNativeTarget "swift_demo" */;
 			buildPhases = (
 				B6F5868BA2EAC0201F4DED09 /* [CP] Check Pods Manifest.lock */,
+				0460D87C2363DF4C005BF59C /* ShellScript */,
 				04EFFDEC21CA33DA008B976B /* Sources */,
 				04EFFDED21CA33DA008B976B /* Frameworks */,
 				04EFFDEE21CA33DA008B976B /* Resources */,
@@ -278,6 +282,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0460D87C2363DF4C005BF59C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		887F79391A73A2FEDE51008B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,12 +310,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-swift_demo/Pods-swift_demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +356,7 @@
 			files = (
 				04EFFDF621CA33DA008B976B /* ViewController.swift in Sources */,
 				04EFFDF421CA33DA008B976B /* AppDelegate.swift in Sources */,
+				0460D87E2363DFE6005BF59C /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
