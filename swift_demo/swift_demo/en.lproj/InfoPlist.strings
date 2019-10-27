@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  swift_demo
+
+  Created by JackLee on 2019/10/27.
+  Copyright © 2019 Jack. All rights reserved.
+*/
+
+
+"NSBluetoothPeripheralUsageDescription" = "want to use bluetooth";
+"NSBluetoothAlwaysUsageDescription" = "want to use bluetooth2";

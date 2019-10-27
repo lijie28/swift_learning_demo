@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  swift_demo
+
+  Created by JackLee on 2019/10/27.
+  Copyright © 2019 Jack. All rights reserved.
+*/
+
+"button_title" = "下次";

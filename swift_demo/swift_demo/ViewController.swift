@@ -14,10 +14,48 @@ import FileProvider
 
 class ViewController: UIViewController {
     
+    var permissionUtil: PermissionUtil?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+//        self.view.backgroundColor = R.color.bgColor()
+        self.permissionUtil = PermissionUtil()
+        self.testCheckBluetoothPermission()
+        
+        /// NotificationCenterを登録
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(notification:)), name: .applicationDidEnterBackground, object: nil)
+        
+//        R.storyboard.
+    }
+    
+    @objc func applicationDidEnterBackground(notification: Notification) {
+//        self.permissionUtil = nil
+    }
+    
+    func openSystemSetting() {
+        guard let url = URL(string: UIApplication.openSettingsURLString) else {
+            // Handling errors that should not happen here
+            return
+        }
+        let app = UIApplication.shared
+        app.open(url)
+    }
+    
+    func testCheckBluetoothPermission() {
+        
+        self.permissionUtil?.checkBluetooth { [weak self] (isOk) in
+            if isOk {
+                print("ok")
+            }
+            else {
+                print("ng")
+                guard let vc = self else { return }
+                AlertUtil.showPermissionWarining(vc: vc, title: "notice", message: "check bluetooth please", permitHandler: { [weak self] in
+                    self?.openSystemSetting()
+                }, cancelHandler: nil)
+            }
+        }
     }
     
     func testSandBox() {
@@ -48,22 +86,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickOnSelectFile(_ sender: Any) {
-        
-        let documentPaths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-        let documentDir = documentPaths.first
-//
-//        let fileP = NSFileProviderManager.init(for: NSFileProviderManage)
-//        self.show(fileP, sender: nil)
-////        let fileBrowser = FileBrowser(initialPath: documentDir)
-//        let browser = UIDocumentBrowserViewController(forOpeningFilesWithContentTypes: ["public.plain-text"])
-//        browser.importDocument(at: URL(string: documentDir!)!, nextToDocumentAt: URL(string: documentDir!)!, mode: UIDocumentBrowserViewController.ImportMode.copy) { (url, error) in
-//            //https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller
-//
-//            //https://github.com/marmelroy/FileBrowser
-//
-//            print(url,error)
-//        }
-//        self.show(browser, sender: nil)
+        self.testCheckBluetoothPermission()
     }
 }
 

@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  swift_demo
+
+  Created by JackLee on 2019/10/27.
+  Copyright © 2019 Jack. All rights reserved.
+*/
+
+
+"NSBluetoothPeripheralUsageDescription" = "想用蓝牙";
+"NSBluetoothAlwaysUsageDescription" = "想用蓝牙2";
+
