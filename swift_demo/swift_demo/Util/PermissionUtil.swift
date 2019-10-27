@@ -39,7 +39,7 @@ extension PermissionUtil: PermissionUtilProtocal {
     func checkBluetooth(resultHandler: @escaping PermissionHandler) {
         print("self.centralManager:", self.centralManager?.state.rawValue as Any)
         guard let state = self.centralManager?.state, state != .unknown else {
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 1)) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                 self.checkBluetooth(resultHandler: resultHandler)
             }
             return
