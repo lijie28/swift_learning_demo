@@ -1,0 +1,15 @@
+
+"Can't end BackgroundTask" error message on iOS 13.0
+https://forums.developer.apple.com/thread/121990
+
+[iOS]バックグラウンドで長時間BLE通信続ける
+http://harumi.sakura.ne.jp/wordpress/2019/05/23/iosバックグラウンドで長時間ble通信続ける方法/
+
+storyboard 国際化
+https://www.jianshu.com/p/e5d5fac05b8c
+
+info.plist 国际化
+https://www.jianshu.com/p/eb968d10e656
+
+黑暗模式适配
+https://qiita.com/hirothings/items/4834481d170332e173f5
